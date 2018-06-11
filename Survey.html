@@ -1,0 +1,206 @@
+<style>
+ body {
+   background-color: rgb(50,98,149);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+ #cover {
+   max-width: 95%;
+   display: block;
+   margin:  2% auto;
+   margin-bottom: -1%;
+ }
+ #title {
+   text-align: center;
+   height: auto;
+   font-size: 50px;
+   font-family: Cambria;
+   font-style: italic;
+   color: rgb(255,200,10);
+   margin-bottom: 20px;
+ }
+
+
+ #start{
+   font-family: comic sans MS;
+   color: #FFF;
+   font-size: 25px;
+   text-decoration: none;
+   border: 3px solid #aaa;
+   border-radius: 5px;
+   padding: 5px;
+ }
+ #start:hover {
+   background-color: rgb(70,70,255);
+   border-color: #ddd;
+ }
+ #survey-form {
+   border-radius: 10px;
+   width: 90%;
+   background-color: white;
+   margin: auto;
+   padding-top: 80px;
+}
+ #description {
+   color: #ddd;
+   font-famiy: Raleway;
+   font-size: 30px;
+   text-align: center;
+   padding: 20px;
+   padding-bottom: 0;
+
+ }
+ .area {
+   display: flex;
+   align-items: center;
+   margin-top: 10px;
+   margin-bottom: 10px;
+ }
+ #dropdown {}
+ #name1,#number1,#email1,#team1 {
+   width: 43%;
+   text-align: right;
+   padding-right: 10px
+ }
+ .part2 {
+   width: 57%;
+ }
+
+ #name,#number,#team,#email{
+   height: 30px;
+   width: 250px;
+   max-width: 40%;
+   max-height: auto;
+   padding: 10px 5px 10px 5px;
+ }
+ .zone {
+   margin: 10px;
+ }
+ .ques {
+   font-size: 25px;
+   font-weight: bold;
+   position: relative;
+   left: 10%;
+ }
+ .choice {
+   font-size: 25px;
+   font-family: helvetica;
+   position: relative;
+   left: 15%;
+ }
+ #submit {
+   margin: 20px auto;
+   padding-left: 10px;
+   padding-right: 10px;
+   border: 2px solid #434;
+   border-radius: 5px;
+   background-color: dodgerblue;
+   font-size: 30px;
+ }
+ #submit:hover {
+   border: 3px solid #333;
+ }
+</style>
+ <!DOCTYPE>
+ <html>
+ <body>
+   <img id='cover' src='http://i63.tinypic.com/xljq0z.png' alt='cover'>
+   <h1 id='title'>Who will make the best performance?</h1>
+   <div style='text-align: center; margin-bottom: 100px'><a href=#description id='start'>Start the survey</a></div>
+   <hr style='margin: 100px 10%'>
+   <p id='description'>Vote your best player</p>
+   <form id='survey-form'>
+     <div class='area'>
+       <div id='name1'>
+         <label id='name-label' for='name'>Name:</label>
+       </div>
+       <div class='part2'>
+         <input id='name' type='input' placeholder="Enter your name" name='name'required >
+       </div>
+     </div>
+     <div class='area'>
+       <div id='number1'>
+         <label id='number-label' for='age'>Age:</label>
+       </div>
+       <div class='part2'>
+           <input id='number' type='number' placeholder="Enter your age" name='age'required min='1' max='200'>
+       </div>
+     </div>
+     <div class='area'>
+       <div id='email1'>
+         <label id='email-label' for='email'>Email:</label>
+       </div>
+       <div class='part2'>
+         <input id='email' type='email' placeholder="Enter your email" name='email'required>
+       </div>
+     </div>
+     <div class='area'>
+       <div id='team1'>
+         <label for='team'>You're a big fan of:</label>
+       </div>
+       <div class='part2'>
+         <input id='team' type='input' placeholder="Team" name='team'required>
+       </div>
+     </div>
+     <hr style='margin: 50px 10% 50px 10%'>
+     <div class='zone' style='display: flex; align-items: center'>
+       <div class='ques' id='dropdown' style="width: 100%">
+         <label for='GBall'>1)  Which position will get the 'Golden Ball' award?</label>
+         <select class='choice' name='GBall'>
+           <option disabled value>Select one</option>
+           <option value='FWD'>Forward</option>
+           <option value='MF'>Midfielder</option>
+           <option value='DEF'>Defender</option>
+           <option value='GK'>Goal keeper</option>
+         </select>
+       </div>
+     </div>
+     <div class='zone'>
+       <p class='ques' style='margin-bottom: 5px;'>2)  Who will get the Golden Boot?</p>
+       <div class='choice'>
+         <label><input type='checkbox' name='GBoot'value='21'>Lionel Messi</label><br>
+         <label><input type='checkbox' name='GBoot'value='22'>Cristiano Ronaldo</label><br>
+         <label><input type='checkbox' name='GBoot'value='23'>Neymar</label><br>
+         <label><input type='checkbox' name='GBoot'value='24'>Thomas Mueller</label><br>
+         <label><input type='checkbox' name='GBoot'value='25'>Mohamed Salah</label><br>
+         <label><input type='checkbox' name='GBoot'value='26'>Another player. If so, please specify:
+         <input style='font-size: 20px'type='text'></label>
+       </div>
+     </div>
+     <div class='zone'>
+       <p class='ques' style='margin-bottom: 5px;'>3)  Who will get the Golden Glove?</p>
+       <div class='choice'>
+         <label><input type='radio' name='GGlove'value='11'>Manuel Neuer</label><br>
+         <label><input type='radio' name='GGlove'value='12'>De Gea</label><br>
+         <label><input type='radio' name='GGlove'value='13'>Hugo Lloris</label><br>
+         <label><input type='radio' name='GGlove'value='14'>Allison</label><br>
+         <label><input type='radio' name='GGlove'value='15'>Another GK. If so, please specify:
+           <input style='font-size: 20px' type='text'></label>
+       </div>
+     </div>
+     <div class='zone'>
+       <p class='ques' style='margin-bottom: 5px;'>4)  Which team will be the champion?</p>
+       <div class='choice'>
+         <label><input type='radio' name='1st' value='1'>Germany</label><br>
+         <label><input type='radio' name='1st' value='2'>Brazil</label><br>
+         <label><input type='radio' name='1st' value='3'>France</label><br>
+         <label><input type='radio' name='1st' value='4'>Argentina</label><br>
+         <label><input type='radio' name='1st' value='5'>England</label><br>
+         <label><input type='radio' name='1st' value='6'>Portugal</label><br>
+         <label><input type='radio' name='1st' value='7'>Belgium</label><br>
+         <label><input type='radio' name='1st' value='8'>Another team. If so, please specify:
+           <input style='font-size: 20px' type='text'></label>
+       </div>
+     </div>
+     <div>
+       <label class='zone ques' for='young'>5)  Who will be the worst player?  (LMAO)</label><br>
+       <textarea class="choice" name='young' placeholder='Hahahaha'
+       style='left: 17%; margin-top: 5px;' rows='1' cols='25'></textarea>
+     </div>
+     <div style='display: flex; justify-content: center'>
+       <button type='submit' id='submit'>Submit</button>
+     </div>
+   </form>
+</body>
+</html>

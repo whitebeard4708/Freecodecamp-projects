@@ -1,0 +1,142 @@
+ <style>
+
+  body {
+
+  }
+  .mid {
+    display: flex;
+    justify-content: center;
+  }
+  #header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: rgb(38,38,38);
+    z-index: 2;
+  }
+  #header-img {
+    position: relative;
+    left: 10%;
+    width: 4.5%;
+  }
+  #nav-bar {
+    position: relative;
+    left: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .nav-link {
+    font-size: 20px;
+    font-family: cursive;
+    color: #eee;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+  }
+  .nav-link:hover {
+    font-size: 23px;
+    color: #ddd;
+    text-shadow: 1px 1px white;
+  }
+  @media screen and (max-width: 500px) {
+    .nav-link {
+      width: 100%;
+      float: none;
+    }
+  }
+  #cover {
+    margin-top: 8%;
+  }
+  #first{
+    margin-bottom: 10px;
+  }
+  #WC-kits {
+    max-width: 100%;
+  }
+  #Shoes {
+    max-width: 100%;
+  }
+  #shoes-img {
+    position: relative;
+    width: 100%;
+  }
+  #Accessories {
+    max-width: 100%;
+  }
+  #video {
+    width: 1200px;
+    height: 657px;
+    position: relative;
+    margin: 10px auto;
+  }
+  #form {
+    width: 70%;
+    margin: -5% auto;
+  }
+  #email {
+    font-size: 20px;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid rgb(40,40,40);
+  }
+  #submit {
+    font-size: 30px;
+    padding: 5px 15px 5px 15px;
+    color: #333;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 150px;
+    background-color: white;
+  }
+  #submit:hover {background-color: lightgray;}
+  #footer {}
+</style>
+
+<!DOCTYPE html>
+<html>
+
+<header id='header'>
+  <img id='header-img' src='https://cdn.dribbble.com/users/99088/screenshots/3535098/5.gif' alt='gif'>
+  <nav id='nav-bar'>
+    <a class='nav-link' href=#WC-kits>WC-kits</a>
+    <a class='nav-link' href=#Shoes>Shoes</a>
+    <a class='nav-link' href=#Accessories>Accessories</a>
+</header>
+<body>
+  <div id='first'>
+    <p style='text-align: center'><img id='cover' src='http://i65.tinypic.com/idacgl.png' alt='1'></p>
+    <form id='form' action='https://www.freecodecamp.com/email-submit'>
+      <div class='mid'>
+        <label for='email'><input type='email' id='email' name='email' placeholder='Enter your email' required></label>
+      </div>
+      <div class='mid'>
+        <a href='https://www.freecodecamp.com/email-submit'><input id='submit' type='submit' ></input></a>
+      </div>
+    </form>
+  </div>
+  <div id='WC-kits'>
+    <img id='Shoes-img'
+        src='http://i67.tinypic.com/jahyxw.jpg' alt='kits'>
+    <div style='display: flex; justify-content:center'>
+      <iframe id='video' src="https://www.youtube.com/embed/m0RhPOsr01g"
+      frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+
+    </div>
+  </div>
+  <div id='Shoes'>
+    <p style='text-align: center'><img id='Shoes-img'
+          src='http://i67.tinypic.com/2j691r4.jpg'
+          alt='Shoes'></p>
+  </div>
+  <div id='Accessories'>
+    <img id='Shoes-img' src='http://i66.tinypic.com/2ajrytx.jpg' alt='Accessories'>
+  </div>
+
+</body>
+
+</html>

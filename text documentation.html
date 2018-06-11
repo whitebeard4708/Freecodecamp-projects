@@ -1,0 +1,590 @@
+<style>
+  h1 {
+    font-family: Comic sans MS;
+    font-size: 30px;
+  }
+  h2 {
+    font-family: Trebuchet MS;
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 25px;
+    font-family: Comic sans MS;
+  }
+  p {font-size: 20px; text-align: justify;}
+  code {
+    white-space: pre;
+    font-size: 15px;
+    line-height: 2;
+    background-color: #f1f1f1;
+    margin: 10px auto;
+    display: block;
+    text-align: left;
+  }
+
+  th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 20px;
+    text-align: justify;
+    padding: 5px;
+  }
+  table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 60%;
+    margin: 0 auto;
+
+  }
+
+  #covertext {
+    font-size: 40px;
+    font-family: cursive;
+    font-style: italic;
+    color: rgb(54,111,148);
+    text-align: center;
+    margin-top: 200px;
+  }
+  .mid-block {
+    display: block;
+    margin: 0 auto;
+  }
+  #link {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 25px 5px 25px;
+    font-family: monospace;
+    font-size: 40px;
+  }
+  #main-doc {
+    width: 75%;
+  }
+  .main-section {
+    position: relative;
+    left: 7%;
+    width: 93%;
+  }
+  #navbar {
+    width: 25%;
+    height: 600px;
+    margin: 10px;
+    overflow-y:auto;
+  }
+  .navbox {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 2px dotted #444;
+  }
+  .navbox:hover {
+    background-color: #eee;
+  }
+  .nav-link {
+    font-family: helvetica;
+    font-size: 25px;
+    color: #222;
+    text-decoration: none;
+  }
+  #Home, #Overview, #Environment_Setup, #Basic_Syntax, #Variable_Types,
+  #Basic_Operators, #Loops, #Numbers, #Strings, #Lists, #Tuples, #Dictionary {}
+  #main {display: flex;}
+  #cover {height: 100%}
+  #italic {font-style: italic;}
+  .moredetails {color: black;}
+  @media screen and (max-height: 600px) {
+    #cover {height: auto;}
+  }
+  @media screen and (max-width: 600px) {
+    #main {display: block;}
+    #navbar {
+      width: 100%;
+    }
+    #main-doc {
+      width: 100%;
+    }
+  }
+</style>
+<!DOCTYPE html>
+<html>
+<div id='cover'>
+  <img class='mid-block' style='position: relative; top: 25%'
+        src='http://i68.tinypic.com/9zwu9g.jpg' alt='logo'>
+  <p id='covertext'>Learn Python basics with experts</p>
+  <button style='background-color: white; border: 2px solid #333'
+          class='mid-block'><a id='link' href=#navbar>START</a></button>
+</div>
+<div id='main'>
+  <nav id='navbar'>
+    <header>
+      <h2>Python Basic Tutorial</h2>
+    </header>
+    <div class='navbox' style='border-top: none'><a class='nav-link' href=#Home>Python - Home</a></div>
+    <div class='navbox'><a class='nav-link' href=#Overview>Python - Overview</a></div>
+    <div class='navbox'><a class='nav-link' href=#Environment_Setup>Python - Environment Setup</a></div>
+    <div class='navbox'><a class='nav-link' href=#Basic_Syntax>Python - Basic Syntax</a></div>
+    <div class='navbox'><a class='nav-link' href=#Variable_Types>Python - Variable Types</a></div>
+    <div class='navbox'><a class='nav-link' href=#Basic_Operators>Python - Basic Operators</a></div>
+    <div class='navbox'><a class='nav-link' href=#Decision_Making>Python - Decision Making</a></div>
+    <div class='navbox'><a class='nav-link' href=#Loops>Python - Loops</a></div>
+    <div class='navbox'><a class='nav-link' href=#Numbers>Python - Numbers</a></div>
+    <div class='navbox'><a class='nav-link' href=#Strings>Python - Strings</a></div>
+    <div class='navbox'><a class='nav-link' href=#Lists>Python - Lists</a></div>
+    <div class='navbox'><a class='nav-link' href=#Tuples>Python - Tuples</a></div>
+    <div class='navbox'><a class='nav-link' href=#Dictionary>Python - Dictionary</a></div>
+  </nav>
+
+  <main id='main-doc'>
+    <section class='main-section' id='Home'>
+      <header><h1>Home</h1></header>
+      <h3>Python Tutorial</h3>
+      <p>Python is a general-purpose interpreted, interactive, object-oriented,
+         and high-level programming language. It was created by Guido van Rossum
+         during 1985- 1990. Like Perl, Python source code is also available under
+         the GNU General Public License (GPL). This tutorial gives enough
+         understanding on Python programming language.</p>
+      <h3>Audience</h3>
+      <p>This tutorial is designed for software programmers who need to learn
+         Python programming language from scratch.</p>
+      <h3>Prerequisites</h3>
+      <p>You should have a basic understanding of Computer Programming
+        terminologies. A basic understanding of any of the programming languages
+        is a plus.</p>
+    </section>
+    <section class='main-section' id='Overview'>
+      <header><h1>Overview</h1></header>
+      <p>Python is a high-level, interpreted, interactive and object-oriented
+         scripting language. Python is designed to be highly readable. It uses
+         English keywords frequently where as other languages use punctuation,
+         and it has fewer syntactical constructions than other languages.</p>
+      <ul>
+        <li><p><strong>Python is Interpreted</strong> − Python is processed at
+           runtime by the interpreter. You do not need to compile your program
+           before executing it. This is similar to PERL and PHP.<p></li>
+        <li><p><strong>Python is Interactive</strong> − You can actually sit at a
+          Python prompt and interact with the interpreter directly to write your
+          programs.</p></li>
+        <li><p><strong>Python is Object-Oriented</strong> − Python supports
+           Object-Oriented style or technique of programming that encapsulates
+           code within objects.</p></li>
+        <li><p><strong>Python is a Beginner's Language</strong> − Python is a
+           great language for the beginner-level programmers and supports the
+           development of a wide range of applications from simple text
+           processing to WWW browsers to games.</p></li>
+      </ul>
+      <p><a class='moredetails' href='https://www.tutorialspoint.com/python/python_overview.htm'
+            target='_blank'>More details</a><p>
+    </section>
+    <section class='main-section' id='Environment_Setup'>
+      <header><h1>Environment Setup</h1></header>
+      <p>Python is available on a wide variety of platforms including Linux
+         and Mac OS X. Let's understand how to set up our Python environment.</p>
+      <h3>Local Environment Setup</h3>
+      <p>Open a terminal window and type "python" to find out if it is already
+         installed and which version is installed.</p>
+      <ul>
+        <li><p>Unix (Solaris, Linux, FreeBSD, AIX, HP/UX, SunOS, IRIX, etc.)</p></li>
+        <li><p>Win 9x/NT/2000</p></li>
+        <li><p>Macintosh (Intel, PPC, 68K)</p></li>
+        <li><p>OS/2</p></li>
+        <li><p>DOS (multiple versions)</p></li>
+        <li><p>PalmOS</p></li>
+        <li><p>Nokia mobile phones</p></li>
+        <li><p>Windows CE</p></li>
+        <li><p>Acorn/RISC OS</p></li>
+        <li><p>BeOS</p></li>
+        <li><p>Amiga</p></li>
+        <li><p>VMS/OpenVMS</p></li>
+        <li><p>QNX</p></li>
+        <li><p>VxWorks</p></li>
+        <li><p>Psion</p></li>
+        <li><p>Python has also been ported to the Java and .NET virtual machines</p></li>
+      </ul>
+      <p><a class='moredetails' href='https://www.tutorialspoint.com/python/python_environment.htm'
+            target='_blank'>More details</a><p>
+    </section>
+    <section class='main-section' id='Basic_Syntax'>
+      <header><h1>Basic Syntax</h1></header>
+      <p>The Python language has many similarities to Perl, C, and Java.
+         However, there are some definite differences between the languages.</p>
+      <h3>First Python program</h3>
+      <p>Let us execute programs in different modes of programming.</p>
+      <p id='italic'>Interactive Mode Programming</p>
+      <p>Invoking the interpreter without passing a script file as a parameter
+         brings up the following prompt.</p>
+<code>$ python
+Python 2.4.3 (#1, Nov 11 2010, 13:34:43)
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-48)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>></code>
+    <p>Type the following text at the Python prompt and press the Enter</p>
+<code>>>> print "Hello, Python!"</code>
+    <p><a class='moredetails' href='https://www.tutorialspoint.com/python/python_basic_syntax.htm'
+          target='_blank'>More details</a><p>
+    </section>
+    <section class='main-section' id='Variable_Types'>
+      <header><h1>Variable Types</h1></header>
+      <p>Variables are nothing but reserved memory locations to store values.
+         This means that when you create a variable you reserve some space in
+         memory.</p>
+      <p>Based on the data type of a variable, the interpreter allocates
+         memory and decides what can be stored in the reserved memory.
+         Therefore, by assigning different data types to variables, you can
+         store integers, decimals or characters in these variables.</p>
+      <h3>Assigning Values to Variables</h3>
+      <p>Python variables do not need explicit declaration to reserve memory
+         space. The declaration happens automatically when you assign a value
+         to a variable. The equal sign (=) is used to assign values to variables.</p>
+      <p>The operand to the left of the = operator is the name of the variable
+         and the operand to the right of the = operator is the value stored in
+          the variable. For example</p>
+<code>#!/usr/bin/python
+
+counter = 100          # An integer assignment
+miles   = 1000.0       # A floating point
+name    = "John"       # A string
+
+print counter
+print miles
+print name</code>
+      <p>Here, 100, 1000.0 and "John" are the values assigned to <i>counter,
+         miles,</i> and <i>name</i> variables, respectively. This produces
+         the following result</p>
+<code>100
+1000.0
+John</code>
+      <h3>Multiple Assignment</h3>
+      <p>Python allows you to assign a single value to several variables
+         simultaneously. For example</p>
+<code>a = b = c = 1</code>
+      <p>Here, an integer object is created with the value 1, and all three
+         variables are assigned to the same memory location. You can also
+         assign multiple objects to multiple variables. For example</p>
+<code>a,b,c=1,2,'John'</code>
+      <p>Here, two integer objects with values 1 and 2 are assigned to
+         variables a and b respectively, and one string object with the value
+         "john" is assigned to the variable c.</p>
+      <h3>Standart Data Types</h3>
+      <p>The data stored in memory can be of many types. For example, a
+         person's age is stored as a numeric value and his or her address is
+         stored as alphanumeric characters. Python has various standard data
+         types that are used to define the operations possible on them and the
+         storage method for each of them.</p>
+      <p>Python has five standard data types</p>
+      <ul>
+        <li><p>Numbers</p></li>
+        <li><p>Strings</p></li>
+        <li><p>Lists</p></li>
+        <li><p>Tuples</p></li>
+        <li><p>Dictionary</p></li>
+      </ul>
+      <p><a class='moredetails' href='https://www.tutorialspoint.com/python/python_variable_types.htm'
+            target='_blank'>More details</a><p>
+    </section>
+    <section class='main-section' id='Basic_Operators'>
+      <header><h1>Basic Operators</h1></header>
+      <p>Operators are the constructs which can manipulate the value of operands.</p>
+      <p>Consider the expression 4 + 5 = 9. Here, 4 and 5 are called operands
+         and + is called operator.</p>
+      <h3>Types of Operator</h3>
+      <p>Python language supports the following types of operators.</p>
+      <ul>
+        <li><p>Arithmetic Operators</p></li>
+        <li><p>Comparison (Relational) Operators</p></li>
+        <li><p>Assignment Operators</p></li>
+        <li><p>Logical Operators</p></li>
+        <li><p>Bitwise Operators</p></li>
+        <li><p>Membership Operators</p></li>
+        <li><p>Identity Operators</p></li>
+      </ul>
+      <p><a class='moredetails' href='https://www.tutorialspoint.com/python/python_basic_operators.htm'
+            target='_blank'>More details</a><p>
+    </section>
+    <section class='main-section' id='Decision_Making'>
+      <header><h1>Decision Making</h1></header>
+      <p>Decision making is anticipation of conditions occurring while
+         execution of the program and specifying actions taken according to
+         the conditions.</p>
+      <p>Decision structures evaluate multiple expressions which produce TRUE
+         or FALSE as outcome. You need to determine which action to take and
+         which statements to execute if outcome is TRUE or FALSE otherwise.</p>
+      <p>Following is the general form of a typical decision making structure
+         found in most of the programming languages</p>
+      <img src='https://www.tutorialspoint.com/python/images/decision_making.jpg'
+            alt='DecisionMaking' class='mid-block'>
+      <p>Python programming language assumes any <b>non-zero</b> and
+         <b>non-null</b> values as TRUE, and if it is either <b>zero</b> or
+         <b>null</b>, then it is assumed as FALSE value.</p>
+      <p>Python programming language provides following types of decision
+         making statements. Click the following links to check their detail.</p>
+      <table>
+        <tr>
+          <th>Sr.No.</th>
+          <th>Statement & Description</th>
+        </tr>
+        <tr>
+          <td style='text-align: center'>1</td>
+          <td><b>if statements</b><br>
+            An <b>if statement</b> consists of boolean expression followed by one or more statements</td>
+        </tr>
+        <tr>
+          <td style='text-align: center'>2</td>
+          <td><b>if...else statements</b><br>
+            An <b>if...else statement</b> can be followed by an optional
+            <b>else statement</b>, which executes when the boolean expressions
+            is FALSE.</td>
+        </tr>
+        <tr>
+          <td style='text-align: center'>3</td><br>
+          <td><b>nested if statements</b><br>
+            You can use one <b>if</b> or <b>else if</b> statement inside
+            another <b>if</b> or <b>else if</b> statement(s).</td>
+        </tf>
+      </table>
+      <p><a class='moredetails' href='https://www.tutorialspoint.com/python/python_decision_making.htm'
+            target='_blank'>More details</a><p>
+    </section>
+    <section class='main-section' id='Loops'>
+      <header><h1>Loops</h1></header>
+      <p>In general, statements are executed sequentially: The first statement
+         in a function is executed first, followed by the second, and so on.
+         There may be a situation when you need to execute a block of code
+         several number of times.</p>
+      <p>Programming languages provide various control structures that allow
+         for more complicated execution paths.</p>
+      <p>A loop statement allows us to execute a statement or group of
+         statements multiple times. The following diagram illustrates a loop
+         statement.</p>
+      <img class='mid-block' src='https://www.tutorialspoint.com/python/images/loop_architecture.jpg'
+            alt='loop'>
+      <p>Python programming language provides following types of loops to
+         handle looping requirements.</p>
+      <table>
+        <tr>
+          <th>Sr.No</th>
+          <th>Loop Type & Description</th>
+        </tr>
+        <tr>
+          <td style='text-align: center'>1</td>
+          <td><b>while loop</b><br>
+            Repeats a statement or group of statements while a given condition
+            is TRUE. It tests the condition before executing the loop body.</td>
+        </tr>
+        <tr>
+          <td style='text-align: center'>2</td>
+          <td><b>for loop</b><br>
+            Executes a sequence of statements multiple times and abbreviates
+            the code that manages the loop variable.</td>
+        </tr>
+        <tr>
+          <td style='text-align: center'>3</td>
+          <td><b>nested loops</b><br>
+            You can use one or more loops inside any another while, for or
+            do..while loop.</td>
+        </tr>
+      </table>
+      <h3>Loop Control Statements</h3>
+      <p>Loop control statements change execution from its normal sequence.
+         When execution leaves a scope, all automatic objects that were created
+         in that scope are destroyed.</p>
+      <p>Python supports the following control statements. Click the following
+         links to check their detail.</p>
+       <table>
+         <tr>
+           <th>Sr.No</th>
+           <th>Control Statement & Description</th>
+         </tr>
+         <tr>
+           <td style='text-align: center'>1</td>
+           <td><b>break statement</b><br>
+             Terminates the loop statement and transfers execution to the
+             statement immediately following the loop.</td>
+         </tr>
+         <tr>
+           <td style='text-align: center'>2</td>
+           <td><b>continue statement</b><br>
+             Causes the loop to skip the remainder of its body and
+             immediately retest its condition prior to reiterating.</td>
+         </tr>
+         <tr>
+           <td style='text-align: center'>3</td>
+           <td><b>past statement</b><br>
+             The pass statement in Python is used when a statement is
+             required syntactically but you do not want any command or code
+             to execute.</td>
+         </tr>
+       </table>
+    </section>
+    <section class='main-section' id='Numbers'>
+      <header><h1>Numbers</h1></header>
+      <p>Number data types store numeric values. They are immutable data types,
+         means that changing the value of a number data type results in a
+         newly allocated object.</p>
+      <p>Number objects are created when you assign a value to them. For example</p>
+<code>var1 = 1
+var2 = 2</code>
+      <p>You can also delete the reference to a number object by using the
+       <b>del</b> statement. The syntax of the del statement is</p>
+<code>del var1[,var2[,var3[....,varN]]]]</code>
+      <p>You can delete a single object or multiple objects by using the
+         <b>del</b> statement. For example</p>
+<code>del var
+del var_a, var_b</code>
+      <p>Python supports four different numerical types</p>
+      <ul>
+        <li><p><b>int (signed integers)</b> − They are often called just integers or
+           ints, are positive or negative whole numbers with no decimal point.</p></li>
+        <li><p><b>long (long integers)</b> − TAlso called longs, they are integers
+          of unlimited size, written like integers and followed by an uppercase or
+          lowercase L.</p></li>
+        <li><p><b>float (floating point real values)</b> − Also called floats,
+           they represent real numbers and are written with a decimal point
+           dividing the integer and fractional parts. Floats may also be in
+           scientific notation, with E or e indicating the power of 10
+           (2.5e2 = 2.5 x 102 = 250).</p></li>
+        <li><p><b>complex (complex numbers)</b> − are of the form a + bJ, where
+           a and b are floats and J (or j) represents the square root of -1
+           (which is an imaginary number). The real part of the number is a,
+           and the imaginary part is b. Complex numbers are not used much in
+           Python programming.</p></li>
+      </ul>
+      <p><a class='moredetails' href='https://www.tutorialspoint.com/python/python_numbers.htm'
+            target='_blank'>More details</a><p>
+    </section>
+    <section class='main-section' id='Strings'>
+      <header><h1>Strings</h1></header>
+      <p>Strings are amongst the most popular types in Python. We can create
+         them simply by enclosing characters in quotes. Python treats single
+         quotes the same as double quotes. Creating strings is as simple as
+         assigning a value to a variable. For example</p>
+<code>var1 = 'Hello World!'
+var2 = "Python Programming"</code>
+      <h3>Accesing Values in Strings</h3>
+      <p>Python does not support a character type; these are treated as
+        strings of length one, thus also considered a substring.</p>
+      <p>To access substrings, use the square brackets for slicing along with
+         the index or indices to obtain your substring. For example</p>
+<code>#!/usr/bin/python
+
+var1 = 'Hello World!'
+var2 = "Python Programming"
+
+print "var1[0]: ", var1[0]
+print "var2[1:5]: ", var2[1:5]</code>
+      <p>When the above code is executed, it produces the following result</p>
+<code>var1[0]:  H
+var2[1:5]:  ytho</code>
+      <p><a class='moredetails' href='https://www.tutorialspoint.com/python/python_strings.htm'
+            target='_blank'>More details</a><p>
+    </section>
+    <section class='main-section' id='Lists'>
+      <header><h1>Lists</h1></header>
+      <p>The most basic data structure in Python is the <b>sequence</b>. Each element
+         of a sequence is assigned a number - its position or index. The first
+         index is zero, the second index is one, and so forth.</p>
+      <p>Python has six built-in types of sequences, but the most common ones
+         are lists and tuples, which we would see in this tutorial.</p>
+      <p>There are certain things you can do with all sequence types. These
+         operations include indexing, slicing, adding, multiplying, and
+         checking for membership. In addition, Python has built-in functions
+         for finding the length of a sequence and for finding its largest and
+         smallest elements.</p>
+      <h3>Python lists</h3>
+      <p>The list is a most versatile datatype available in Python which can
+         be written as a list of comma-separated values (items) between square
+         brackets. Important thing about a list is that items in a list need
+         not be of the same type.</p>
+      <p>Creating a list is as simple as putting different comma-separated
+         values between square brackets. For example<p>
+<code>list1 = ['physics', 'chemistry', 1997, 2000];
+list2 = [1, 2, 3, 4, 5 ];
+list3 = ["a", "b", "c", "d"]</code>
+      <p>Similar to string indices, list indices start at 0, and lists can be
+         sliced, concatenated and so on.</p>
+      <h3>Accessing values in lists</h3>
+      <p>To access values in lists, use the square brackets for slicing along
+         with the index or indices to obtain value available at that index.
+         For example</p>
+<code>#!/usr/bin/python
+
+list1 = ['physics', 'chemistry', 1997, 2000];
+list2 = [1, 2, 3, 4, 5, 6, 7 ];
+print "list1[0]: ", list1[0]
+print "list2[1:5]: ", list2[1:5]</code>
+      <p>When the above code is executed, it produces the following result</p>
+<code>list1[0]:  physics
+list2[1:5]:  [2, 3, 4, 5]</code>
+      <p><a class='moredetails' href='https://www.tutorialspoint.com/python/python_lists.htm'
+          target='_blank'>More details</a><p>
+    </section>
+    <section class='main-section' id='Tuples'>
+      <header><h1>Tuples</h1></header>
+      <p>A tuple is a sequence of immutable Python objects. Tuples are
+         sequences, just like lists. The differences between tuples and
+         lists are, the tuples cannot be changed unlike lists and tuples
+         use parentheses, whereas lists use square brackets.</p>
+      <p>Creating a tuple is as simple as putting different comma-separated
+         values. Optionally you can put these comma-separated values between
+         parentheses also. For example</p>
+<code>tup1 = ('physics', 'chemistry', 1997, 2000);
+tup2 = (1, 2, 3, 4, 5 );
+tup3 = "a", "b", "c", "d";</code>
+      <p>The empty tuple is written as two parentheses containing nothing</p>
+<code>tup1 = ()</code>
+      <p>To write a tuple containing a single value you have to include a
+         comma, even though there is only one value</p>
+<code>tup1 = (1,)</code>
+      <p>Like string indices, tuple indices start at 0, and they can be sliced,
+         concatenated, and so on.</p>
+      <h3>Accessing values in tuples</h3>
+      <p>To access values in tuple, use the square brackets for slicing along
+         with the index or indices to obtain value available at that index.
+         For example</p>
+<code>#!/usr/bin/python
+
+tup1 = ('physics', 'chemistry', 1997, 2000);
+tup2 = (1, 2, 3, 4, 5, 6, 7 );
+print "tup1[0]: ", tup1[0];
+print "tup2[1:5]: ", tup2[1:5];</code>
+      <p>When the above code is executed, it produces the following result</p>
+<code>tup1[0]:  physics
+tup2[1:5]:  (2, 3, 4, 5)</code>
+      <p><a class='moredetails' href='https://www.tutorialspoint.com/python/python_tuples.htm'
+            target='_blank'>More details</a><p>
+    </section>
+    <section class='main-section' id='Dictionary'>
+      <header><h1>Dictionary</h1></header>
+      <p>Each key is separated from its value by a colon (:), the items are
+         separated by commas, and the whole thing is enclosed in curly braces.
+         An empty dictionary without any items is written with just two curly
+         braces, like this: {}.</p>
+      <p>Keys are unique within a dictionary while values may not be. The
+         values of a dictionary can be of any type, but the keys must be of an
+         immutable data type such as strings, numbers, or tuples.</p>
+      <h3>Accessing values in dictionary</h3>
+      <p>To access dictionary elements, you can use the familiar square
+         brackets along with the key to obtain its value. Following is a
+         simple example</p>
+<code>#!/usr/bin/python
+
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+print "dict['Name']: ", dict['Name']
+print "dict['Age']: ", dict['Age']</code>
+      <p>When the above code is executed, it produces the following result</p>
+<code>dict['Name']:  Zara
+dict['Age']:  7</code>
+      <p>If we attempt to access a data item with a key, which is not part of
+         the dictionary, we get an error as follows</p>
+<code>#!/usr/bin/python
+
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+print "dict['Alice']: ", dict['Alice']</code>
+      <p>When the above code is executed, it produces the following result</p>
+<code>dict['Alice']:
+Traceback (most recent call last):
+   File "test.py", line 4, in <module>
+      print "dict['Alice']: ", dict['Alice'];
+KeyError: 'Alice'</code>
+      <p><a class='moredetails' href='https://www.tutorialspoint.com/python/python_dictionary.htmm'
+          target='_blank'>More details</a><p>
+    </section>
+  </main>
+</html>
